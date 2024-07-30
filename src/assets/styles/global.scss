@@ -1,0 +1,56 @@
+@forward 'reset';
+@use '_variables' as *;
+@use '_mixins' as *;
+
+@include font-face('Montserrat', '../fonts/Montserrat-Regular', 400);
+@include font-face('Montserrat', '../fonts/Montserrat-Medium', 500);
+@include font-face('Montserrat', '../fonts/Montserrat-SemiBold', 600);
+@include font-face('Montserrat', '../fonts/Montserrat-Bold', 700);
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+h2 {
+  margin-bottom: 36px;
+  font-size: 36px;
+  font-weight: 600;
+  color: $black;
+}
+
+h3 {
+  margin-bottom: 24px;
+  font-size: 26px;
+  font-weight: 600;
+  color: $black;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1254px;
+
+  @media (max-width: $screen-xl) {
+    max-width: calc(764 / 768 * 100%);
+    padding: 0 10px;
+  }
+
+  @media (max-width: $screen-sm) {
+    max-width: calc(386 / 390 * 100%);
+  }
+}
